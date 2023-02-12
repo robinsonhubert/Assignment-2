@@ -23,3 +23,13 @@ if (links.length) {
     });
   });
 }
+
+function bigImg(x) {
+    x.style.height = "500px";
+    x.style.width = "500px";
+  }
+  
+  function normalImg(x) {
+    x.style.height = "300px";
+    x.style.width = "300px";
+  }
