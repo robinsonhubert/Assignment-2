@@ -2,55 +2,81 @@
   <head>
     <title>Simple Map</title>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-    <link rel="stylesheet" href="Contact.css" />
-    <script src="Contact.js"></script>
+    <!-- <link href="CSS/index.css" rel="stylesheet"> -->
+
+    <link rel="stylesheet" href="CSS/Contact.css" />
+    <script src="CSS/Contact.js"></script>
   </head>
-  <body>
-    <div class="formContainer">
-    <div class="floatLeft" id="map"></div>
-    <div class="floatRight" id="form">
-        <form onsubmit="return myfunc()">
-            <h3>45,BC a latin professor at Sydney College in Vijadna</h3>
-            <label for="no">Phone :</label>
-            <span id="no">+94764562132</span><br>
-            <label for="gmail">Email :</label>
-            <span id="gmail">example01@gmail.com</span><br>
-            <label for="fax">Email :</label>
-            <span id="fax">+441246789799</span><br><br>
-
-              <label for="fuser">First Name</label><br>
-              <input type="text" name="" value="" id="fuser" placeholder="Enter your name" autocomplete="off">
-              <p class="Error" id="FirstError"></p>
-
-              <label  for="luser">Last Name</label><br>
-              <input  type="text" name="" value="" id="luser" placeholder="Enter your name" autocomplete="off">
-              <p class="Error" id="LastError"></p>
-              
-                <label  for="email">Email Address</label><br>
-                <input  type="text" name="" value="" id="email" placeholder="Enter your Email Address" autocomplete="off"><br>
-                <p class="Error" id="EmailError" ></p>
+  <body class="bg-purple">
+    
         
-        
-                <label  for="Pnumber">Phone Number</label><br>
-                <input  type="text" name="" value="" id="Pnumber" placeholder="Enter your Phone Number" autocomplete="off"><br>
-                <p class="Error" id="PnumberError"></p>
+      <!-- navbar starts -->
+      <div class="custom-navbar">
+        <div class="navbar-links">
+            <ul>
+              <li><a href="Product.html">Home</a></li>
+              <li><a href="#" target="_blank">About</a></li>
+              <li><a href="#" target="_blank">Features</a></li>
+            </ul>
+        </div>
+    </div>
+      
+    <h1 id="contactform">Drop Us a Information</h1>
+  <section>
+    <div style="display: grid; grid-template-columns: auto auto; padding-left: 30px; padding-right: 500px; margin-top: 30px; margin-left: 100px;">
+      <div class="contain">
+         <div id="map"></div>
+      </div>
+      <!--Card here-->
+      <fieldset class="fieldset">
 
-                <label for="message">Phone Number</label><br>
-                <textarea name="" id="message" cols="30" rows="10"></textarea> 
-                <br>
-                <br>
+      <div class="card" style="width: 43rem; height: 15rem; margin-left: 100px; margin-top: 30px;">
+        <div class="card-body">
+          <h3 class="card-title">95 AS, Chief Professor at losAngels University</h3>
+          <p class="card-text" style="margin-top: 25px;"><b>Phone:-</b> +94774931236<br><b>Email:-</b> example@gmail.com<br><b>Fax:-</b> +94 756545100<br><b>Contact URL:</b> <a href="www.mywebpage.com">www.mywebpage.com</a></p>
+        </div>
+        <h4 id="mailid">Want to Know More?? Fill the form</h4>
+          <div style="margin-top: 30px; margin-left: 40px;">
+           <form onsubmit="return validateForm()" action="success.html" target="_blank" >
+            <div class="grid-container">
+              <div class="item1">
+                <input type="text" id="firstname" name="firstname" placeholder="First Name"><br>
+                <span id="errorfirstname"></span>
+              </div>
+              <div class="item2">
+                <input type="text" id="lastname" name="lastname" placeholder="Last Name"><br>
+                <span id="errorlastname"></span>
+              </div>
+              <div class="item4">
+                <input type="text" id="email" name="email" placeholder="Email"><br><br>
+                <span id="erroremail"></span>
 
-        
-               
-            
-            <input id="Submit" type="submit" name="" value="Submit_Validation" onclick="">
+              </div>
+              <div class="item5">
+                <input type="text" id="phone" name="phone" placeholder="Contact Number"><br>
+                <span id="errorphone"></span><br><br>
+              </div>
+              <div class="item6">
+                <input type="text" id="message" name="message" placeholder="Your Message Here....."><br>
+                <span id="errormessage"></span><br><br>
+              </div>
+            </div>
+          
+            <button class="btn" id="send">Submit</button>
+            <p id="successMsg"></p>
           </form>
+        </fieldset>
+        </div> 
     </div>
-    </div>
-  
+    </section>
+  <script src="Api.js"></script>
+
       <script defer
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBbBTsw3a0xr_gDG89PMwd99dpxoE-y45A&callback=initMap"></script>
-      
+      <script src="CSS/index.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>  
+    
   </body>
 </html>
