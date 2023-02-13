@@ -1,0 +1,56 @@
+<html>
+  <head>
+    <title>Simple Map</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+
+    <link rel="stylesheet" href="Contact.css" />
+    <script src="Contact.js"></script>
+  </head>
+  <body>
+    <div class="formContainer">
+    <div class="floatLeft" id="map"></div>
+    <div class="floatRight" id="form">
+        <form onsubmit="return myfunc()">
+            <h3>45,BC a latin professor at Sydney College in Vijadna</h3>
+            <label for="no">Phone :</label>
+            <span id="no">+94764562132</span><br>
+            <label for="gmail">Email :</label>
+            <span id="gmail">example01@gmail.com</span><br>
+            <label for="fax">Email :</label>
+            <span id="fax">+441246789799</span><br><br>
+
+              <label for="fuser">First Name</label><br>
+              <input type="text" name="" value="" id="fuser" placeholder="Enter your name" autocomplete="off">
+              <p class="Error" id="FirstError"></p>
+
+              <label  for="luser">Last Name</label><br>
+              <input  type="text" name="" value="" id="luser" placeholder="Enter your name" autocomplete="off">
+              <p class="Error" id="LastError"></p>
+              
+                <label  for="email">Email Address</label><br>
+                <input  type="text" name="" value="" id="email" placeholder="Enter your Email Address" autocomplete="off"><br>
+                <p class="Error" id="EmailError" ></p>
+        
+        
+                <label  for="Pnumber">Phone Number</label><br>
+                <input  type="text" name="" value="" id="Pnumber" placeholder="Enter your Phone Number" autocomplete="off"><br>
+                <p class="Error" id="PnumberError"></p>
+
+                <label for="message">Phone Number</label><br>
+                <textarea name="" id="message" cols="30" rows="10"></textarea> 
+                <br>
+                <br>
+
+        
+               
+            
+            <input id="Submit" type="submit" name="" value="Submit_Validation" onclick="">
+          </form>
+    </div>
+    </div>
+  
+      <script defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBbBTsw3a0xr_gDG89PMwd99dpxoE-y45A&callback=initMap"></script>
+      
+  </body>
+</html>

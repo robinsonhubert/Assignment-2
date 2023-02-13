@@ -10,19 +10,22 @@ window.onload = function() {
     }
 }
 
-const links = document.querySelectorAll('.nav-link');
+document.querySelectorAll('.nav-link').addEventListener("click",function(){
+  document.querySelectorAll('.nav-link').classList.add("active")
+})
+// const links = document.querySelectorAll('.nav-link');
     
-if (links.length) {
-  links.forEach((link) => {
-    link.addEventListener('click', (e) => {
-      links.forEach((link) => {
-          link.classList.remove('active');
-      });
-      e.preventDefault();
-      link.classList.add('active');
-    });
-  });
-}
+// if (links.length) {
+//   links.forEach((link) => {
+//     link.addEventListener('click', (e) => {
+//       links.forEach((link) => {
+//           link.classList.remove('active');
+//       });
+//       e.preventDefault();
+//       link.classList.add('active');
+//     });
+//   });
+// }
 
 function bigImg(x) {
     x.style.height = "500px";
